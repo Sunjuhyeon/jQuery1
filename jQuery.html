@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" 
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".popup button").click(function(){
+                // $(".popup").css("display","none")
+                $(".popup").hide();
+            })
+        })
+    </script>
+    <style>
+        :root{
+            --popup-width : 300px;
+            --width-b : 500px;
+        }
+        .popup{
+            width: var(--popup-width);
+            height: var(--popup-width);
+            background-color: antiquewhite;
+            border-radius: 50%;
+            position: fixed;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            margin: auto;
+        }
+        .popup button{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <button>닫기</button>
+    </div>
+</body>
+</html>

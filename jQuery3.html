@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#gnb .button0").click(function(){
+                $("body,.button0").css("background","lightgray")
+                $(".button0").css("color","red")
+                $(".button1,.button2").css("background","black")
+            })
+            $("#gnb .button1").click(function(){
+                $("body,.button1").css("background","lightgray")
+                $(".button1").css("color","yellow")
+                $(".button0,.button2").css("background","black")
+            })
+            $("#gnb .button2").click(function(){
+                $("body,.button2").css("background","lightgray")
+                $(".button2").css("color","green")
+                $(".button0,.button1").css("background","black")
+            })
+        })
+        
+    </script>
+    <style>
+        :root{
+            --width-s : 100px
+        }
+        #gnb{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #gnb>button{
+            width: var(--width-s);
+            height: var(--width-s);
+            border-radius: 50%;
+            border-style: none;
+            margin:0 1em;
+        }
+        .button0{
+            color: red;
+        }
+        .button1{
+            color: yellow;
+        }
+        .button2{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="gnb">
+        <button class="button0">빨강</button>
+        <button class="button1">노랑</button>
+        <button class="button2">초록</button>
+    </div>
+</body>
+</html>

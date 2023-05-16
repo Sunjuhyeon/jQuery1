@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".button0").click(function () {
+                $("body").css("background", "red")
+            })
+            $(".button1").click(function () {
+                $("body").css("background", "yellow")
+            })
+            $(".button2").click(function () {
+                $("body").css("background", "blue")
+            })
+
+            for (var i = 0; i < $("#gnb button").length; i++) {
+
+                $("#gnb button").eq(i).click(function () {
+                    $("body").css("background", $(this).data("color"))
+                })
+            }
+        })
+
+    </script>
+    <style>
+        body {
+            display: flex;
+        }
+        .circle{
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            border: 2px solid palevioletred;
+            border-radius: 50%;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button0"><button>빨강</button></div>
+    <div class="button1"><button>노랑</button></div>
+    <div class="button2"><button>파랑</button></div>
+
+    <div id="gnb">
+        <button data-color="black">검정</button>
+        <button data-color="gray">회색</button>
+        <button data-color="navy">남색</button>
+    </div>
+</body>
+
+</html>
